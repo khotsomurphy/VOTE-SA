@@ -1,13 +1,41 @@
-# VOTE SA installable web app
+# VOTE SA — installable web-app package
 
-This is a static Progressive Web App (PWA) prototype. It includes a fingerprint-style logo, install prompt, manifest and service worker for caching the shell offline.
+This package is a mobile-friendly Progressive Web App (PWA) starter. It includes the VOTE SA prototype, fingerprint-style app icons, a web app manifest, and offline caching.
 
-## Publish with GitHub Pages
-1. Upload the contents of this folder into the root of `khotsomurphy/VOTE-SA` on the `main` branch (keep `.github/workflows/pages.yml`).
-2. In the repository, open **Settings → Pages** and choose **GitHub Actions** as the build and deployment source.
-3. Ensure the workflow has permission to deploy Pages, then check the **Actions** tab for a successful deployment.
-4. The public address will normally be `https://khotsomurphy.github.io/VOTE-SA/` after deployment succeeds. Do not share it as live until it opens successfully over HTTPS.
-5. On Android Chrome, open the published HTTPS address and use **Install app** / **Add to Home screen**. On iPhone Safari, use **Share → Add to Home Screen**.
+## Install it on a phone
 
-## Important limitations
-This is a demonstration, not an official IEC service. The party list is illustrative and incomplete. Poll responses are stored only in the current device's browser; there is no central database, live national tally, voter identity verification, official ballot or biometric authentication. The fingerprint is a logo only. Do not present prototype results as election results.
+**Important:** A ZIP file opened directly from Downloads is only a source package. For the full app-style installation, the folder must first be published to a secure HTTPS website. The package is ready for that hosting step, but it has not been published to a website by this project.
+
+### Android (Chrome)
+1. Publish the contents of this folder to an HTTPS website.
+2. Open that website in Chrome on your Android phone.
+3. Tap the three-dot menu, then choose **Install app** or **Add to Home screen**.
+4. Confirm. The VOTE SA icon will appear on your home screen.
+
+### iPhone (Safari)
+1. Publish the contents of this folder to an HTTPS website.
+2. Open the website in Safari.
+3. Tap **Share** → **Add to Home Screen** → **Add**.
+
+## What is included
+- `index.html`: responsive VOTE SA interface.
+- `manifest.webmanifest`: install name, display mode, colours and icons.
+- `sw.js`: caches the app shell and icons for offline reopening after the first successful visit.
+- `icons/`: 192px, 512px and Apple touch icons.
+
+## Important product and safety limits
+- This is a prototype, not an official IEC product and not a legally binding voting service.
+- Public poll responses are saved only in the current browser/device. They are not sent to a shared server and there is no live national tally.
+- The party list is a limited preview, not the full current IEC register.
+- The official results panel is not connected to an IEC feed.
+- The fingerprint is artwork only. The app does not collect fingerprint/biometric data.
+- Offline mode can show cached content; it cannot receive live updates while disconnected.
+
+## Hosting checklist
+- Upload the contents of this folder (not the ZIP itself) to an HTTPS static host.
+- Keep `index.html`, `manifest.webmanifest`, `sw.js` and the `icons/` directory at the same relative paths.
+- Confirm the host serves `manifest.webmanifest` with a JSON-compatible content type and allows service workers.
+- Test installation and offline reopening on a real device.
+
+## Next production steps
+A shared poll backend, moderation and abuse controls, a complete IEC party-register import, authorised read-only IEC data integration, privacy/security review, accessibility testing, and app-store packaging are still required. Do not add legal ballot casting or biometric voter identification without the appropriate IEC authority and legal approvals.

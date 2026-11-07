@@ -1,9 +1,9 @@
-VOTE SA — DEPLOYMENT CHECKLIST
-[ ] Upload all files and hidden .github folder to repository root on main.
-[ ] GitHub repository Settings > Pages > Source: GitHub Actions.
-[ ] Confirm Actions workflow completes successfully.
-[ ] Open the deployed HTTPS URL and test on Android Chrome.
-[ ] Install via browser Install app / Add to Home screen.
-[ ] Test offline after first successful load.
-[ ] Keep demo poll data clearly labelled as device-only and non-official.
-[ ] Obtain appropriate adult/guardian help with public publishing and any legal/privacy requirements.
+VOTE SA PWA DEPLOYMENT CHECKLIST
+
+[ ] Upload the contents of VOTE_SA folder to an HTTPS static website.
+[ ] Check the site opens at its HTTPS address.
+[ ] Check manifest.webmanifest and icons load.
+[ ] Open in Android Chrome and choose Install app / Add to Home screen.
+[ ] Open in iPhone Safari and use Share > Add to Home Screen.
+[ ] Test offline reopening after the first online visit.
+[ ] Keep the demo labels visible until real data services have been authorised and tested.
