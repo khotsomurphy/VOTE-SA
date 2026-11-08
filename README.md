@@ -1,5 +1,6 @@
 # VOTE SA — installable web-app package
 
+#Read and write permission to chatGPT
 This package is a mobile-friendly Progressive Web App (PWA) starter. It includes the VOTE SA prototype, fingerprint-style app icons, a web app manifest, and offline caching.
 
 ## Install it on a phone
