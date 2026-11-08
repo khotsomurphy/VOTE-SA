@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#123c2e">
 <title>VOTE SA — Your vote. Your voice.</title>
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="./manifest.webmanifest">
 <style>
 :root{--green:#123c2e;--green2:#1d6b4d;--gold:#e2b83f;--ink:#15231d;--muted:#64736c;--paper:#f5f7f5;--line:#dce5df;--white:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
@@ -81,6 +82,14 @@ footer{padding:25px 18px 40px;color:var(--muted);font-size:12px;text-align:cente
  </section>
 </main>
 <footer>VOTE SA • Independent civic information prototype • Not affiliated with or endorsed by the IEC.</footer>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .catch(error => console.error("VOTE SA offline error:", error));
+  });
+}
+</script>
 <script>
 const parties=[
 ["African Christian Democratic Party","ACDP"],["ActionSA","ActionSA"],["Al-Jama-ah","ALJAMA AH"],["African National Congress","ANC"],["African Transformation Movement","ATM"],["Build One South Africa","BOSA"],["Democratic Alliance","DA"],["Economic Freedom Fighters","EFF"],["Freedom Front Plus","FF Plus"],["Good Party","GOOD"],["Inkatha Freedom Party","IFP"],["National Coloured Congress","NCC"],["Patriotic Alliance","PA"],["Pan Africanist Congress of Azania","PAC"],["RISE Mzansi","RISE"],["United Africans Transformation","UAT"],["uMkhonto weSizwe","MK"]];
